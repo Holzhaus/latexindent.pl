@@ -40,6 +40,7 @@ GetOptions (
     "onlydefault|d"=>\$switches{onlyDefault},
     "overwrite|w"=>\$switches{overwrite},
     "overwriteIfDifferent|wd"=>\$switches{overwriteIfDifferent},
+    "overwriteWithoutBackup"=>\$switches{overwriteWithoutBackup},
     "outputfile|o=s"=>\$switches{outputToFile},
     "modifylinebreaks|m"=>\$switches{modifyLineBreaks},
     "logfile|g=s"=>\$switches{logFileName},

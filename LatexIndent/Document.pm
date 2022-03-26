@@ -112,6 +112,7 @@ sub latexindent{
       # overwrite and overwriteIfDifferent switches, per file
       ${$self}{overwrite} = $switches{overwrite};
       ${$self}{overwriteIfDifferent} = $switches{overwriteIfDifferent};
+      ${$self}{overwriteWithoutBackup} = $switches{overwriteWithoutBackup};
 
       # the main operations
       $self->operate_on_file;
@@ -211,7 +212,7 @@ sub output_indented_text{
     $logger->info("*Output routine:");
 
     # if -overwrite is active then output to original fileName
-    if(${$self}{overwrite}){
+    if(${$self}{overwrite} || ${$self}{overwriteWithoutBackup}){
         $logger->info("Overwriting file ${$self}{fileName}");
         open(OUTPUTFILE,">",${$self}{fileName});
         print OUTPUTFILE ${$self}{body};

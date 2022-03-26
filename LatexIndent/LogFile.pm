@@ -64,6 +64,8 @@ usage: latexindent.pl [options] [file]
       -wd, --overwriteIfDifferent
           overwrite the current file IF the indented text is different from original; 
           a backup will be made, but still be careful
+      --overwriteWithoutBackup
+          overwrite the current file; NO BACKUP WILL BE MADE, USE AT YOUR OWN RISK!
       -s, --silent
           silent mode: no output will be given to the terminal
       -t, --trace
