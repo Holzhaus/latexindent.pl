@@ -2,7 +2,7 @@
   name: latexindent.pl
   description: Run latexindent.pl (get dependencies using CPAN)
   minimum_pre_commit_version: 2.1.0
-  entry: latexindent.pl
+  entry: .pre-commit/wrapper.py
   args: ["--overwrite", "--local"]
   language: perl
   types: [tex]
@@ -10,7 +10,7 @@
   name: latexindent.pl
   description: Run latexindent.pl (get dependencies using Conda)
   minimum_pre_commit_version: 2.1.0
-  entry: latexindent.pl
+  entry: .pre-commit/wrapper.py
   args: ["--overwrite", "--local"]
   language: conda
   types: [tex]
